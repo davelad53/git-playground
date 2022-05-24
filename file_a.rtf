@@ -1,8 +1,214 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2638
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red159\green160\blue28;\red180\green36\blue25;
+\red47\green180\blue29;\red46\green174\blue187;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c68469\c68012\c14211;\cssrgb\c76411\c21697\c12527;
+\cssrgb\c20241\c73898\c14950;\cssrgb\c20199\c73241\c78251;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 Testing}
+\f0\fs22 \cf2 \CocoaLigature0 Last login: Tue May 24 21:48:23 on ttys000\
+davidbarnish@Davids-MacBook-Air ~ % git -- version\
+xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.\
+davidbarnish@Davids-MacBook-Air ~ % cd devopscourse\
+davidbarnish@Davids-MacBook-Air devopscourse % python3 greetings.py\
+What is your name? dave\
+Hello, dave!\
+davidbarnish@Davids-MacBook-Air devopscourse % python3\
+Python 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+>>> cd \
+Traceback (most recent call last):\
+  File "<stdin>", line 1, in <module>\
+NameError: name 'cd' is not defined. Did you mean: 'id'?\
+>>> exit()\
+davidbarnish@Davids-MacBook-Air devopscourse % cd /Users/davidbarnish/Devopscourse/git-playground\
+davidbarnish@Davids-MacBook-Air git-playground % git init\
+\cf3 hint: Using 'master' as the name for the initial branch. This default branch name\cf2 \
+\cf3 hint: is subject to change. To configure the initial branch name to use in all\cf2 \
+\cf3 hint: of your new repositories, which will suppress this warning, call:\cf2 \
+\cf3 hint: \cf2 \
+\cf3 hint: 	git config --global init.defaultBranch <name>\cf2 \
+\cf3 hint: \cf2 \
+\cf3 hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\cf2 \
+\cf3 hint: 'development'. The just-created branch can be renamed via this command:\cf2 \
+\cf3 hint: \cf2 \
+\cf3 hint: 	git branch -m <name>\cf2 \
+Initialized empty Git repository in /Users/davidbarnish/Devopscourse/git-playground/.git/\
+davidbarnish@Davids-MacBook-Air git-playground % git config --global user.name "Dave Barnish"\
+davidbarnish@Davids-MacBook-Air git-playground % git config --global user.email davidbarnish@hotmail.co.uk\
+davidbarnish@Davids-MacBook-Air git-playground % git status\
+On branch master\
+\
+No commits yet\
+\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+	\cf4 file_a.rtf\cf2 \
+\
+nothing added to commit but untracked files present (use "git add" to track)\
+davidbarnish@Davids-MacBook-Air git-playground % git add file_a.rtf\
+davidbarnish@Davids-MacBook-Air git-playground % git status\
+On branch master\
+\
+No commits yet\
+\
+Changes to be committed:\
+  (use "git rm --cached <file>..." to unstage)\
+	\cf5 new file:   file_a.rtf\cf2 \
+\
+davidbarnish@Davids-MacBook-Air git-playground % git commit ~m "my first commit"\
+zsh: no such user or named directory: m\
+davidbarnish@Davids-MacBook-Air git-playground % git commit -m "My first commit"\
+[master (root-commit) 0d32301] My first commit\
+ 1 file changed, 6 insertions(+)\
+ create mode 100644 file_a.rtf\
+davidbarnish@Davids-MacBook-Air git-playground % git status\
+On branch master\
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git restore <file>..." to discard changes in working directory)\
+	\cf4 modified:   file_a.rtf\cf2 \
+\
+no changes added to commit (use "git add" and/or "git commit -a")\
+davidbarnish@Davids-MacBook-Air git-playground % git add -all\
+error: did you mean `--all` (with two dashes)?\
+davidbarnish@Davids-MacBook-Air git-playground % git add --all\
+davidbarnish@Davids-MacBook-Air git-playground % git commit -m "update text file"\
+[master d2feefa] update text file\
+ 1 file changed, 4 insertions(+), 2 deletions(-)\
+davidbarnish@Davids-MacBook-Air git-playground % git log\
+\cf3 commit d2feefa429364d4d174768338d88dc6c6272d66e (
+\f1\b \cf6 HEAD -> \cf5 master
+\f0\b0 \cf3 )\cf2 \
+Author: Dave Barnish <davidbarnish@hotmail.co.uk>\
+Date:   Tue May 24 22:23:37 2022 +0100\
+\
+    update text file\
+\
+\cf3 commit 0d323016f8fceda121bdc518458eda4959ad32b4\cf2 \
+Author: Dave Barnish <davidbarnish@hotmail.co.uk>\
+Date:   Tue May 24 22:21:56 2022 +0100\
+\
+    My first commit\
+davidbarnish@Davids-MacBook-Air git-playground % git remote add origin https://github.com/davelad53/git-playground.git\
+davidbarnish@Davids-MacBook-Air git-playground % git remote --verbose\
+origin	https://github.com/davelad53/git-playground.git (fetch)\
+origin	https://github.com/davelad53/git-playground.git (push)\
+davidbarnish@Davids-MacBook-Air git-playground % git push --set-upstream origin master\
+Username for 'https://github.com': davelad53\
+Password for 'https://davelad53@github.com': \
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.\
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.\
+fatal: Authentication failed for 'https://github.com/davelad53/git-playground.git/'\
+davidbarnish@Davids-MacBook-Air git-playground % git push --set-upstream origin master\
+Username for 'https://github.com': davelad53\
+Password for 'https://davelad53@github.com': \
+remote: Invalid username or password.\
+fatal: Authentication failed for 'https://github.com/davelad53/git-playground.git/'\
+davidbarnish@Davids-MacBook-Air git-playground % git push -origin main\
+fatal: 'main' does not appear to be a git repository\
+fatal: Could not read from remote repository.\
+\
+Please make sure you have the correct access rights\
+and the repository exists.\
+davidbarnish@Davids-MacBook-Air git-playground % git push --set-upstream origin master\
+Username for 'https://github.com': davelad53\
+Password for 'https://davelad53@github.com': \
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.\
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.\
+fatal: Authentication failed for 'https://github.com/davelad53/git-playground.git/'\
+davidbarnish@Davids-MacBook-Air git-playground % git push --set-upstream origin master\
+Username for 'https://github.com': davelad53\
+Password for 'https://davelad53@github.com': \
+remote: Invalid username or password.\
+fatal: Authentication failed for 'https://github.com/davelad53/git-playground.git/'\
+davidbarnish@Davids-MacBook-Air git-playground % \
+davidbarnish@Davids-MacBook-Air git-playground % git remote set-url origin https://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@github.com/davelad53/git-playground.git\
+davidbarnish@Davids-MacBook-Air git-playground % git push -u origin main\
+error: src refspec main does not match any\
+\cf4 error: failed to push some refs to 'https://github.com/davelad53/git-playground.git'\cf2 \
+davidbarnish@Davids-MacBook-Air git-playground % git push --set-upstream origin master\
+Enumerating objects: 6, done.\
+Counting objects: 100% (6/6), done.\
+Delta compression using up to 8 threads\
+Compressing objects: 100% (4/4), done.\
+Writing objects: 100% (6/6), 709 bytes | 709.00 KiB/s, done.\
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0\
+remote: Resolving deltas: 100% (1/1), done.\
+To https://github.com/davelad53/git-playground.git\
+ * [new branch]      master -> master\
+Branch 'master' set up to track remote branch 'master' from 'origin'.\
+davidbarnish@Davids-MacBook-Air git-playground % git pull\
+\cf3 hint: Pulling without specifying how to reconcile divergent branches is\cf2 \
+\cf3 hint: discouraged. You can squelch this message by running one of the following\cf2 \
+\cf3 hint: commands sometime before your next pull:\cf2 \
+\cf3 hint: \cf2 \
+\cf3 hint:   git config pull.rebase false  # merge (the default strategy)\cf2 \
+\cf3 hint:   git config pull.rebase true   # rebase\cf2 \
+\cf3 hint:   git config pull.ff only       # fast-forward only\cf2 \
+\cf3 hint: \cf2 \
+\cf3 hint: You can replace "git config" with "git config --global" to set a default\cf2 \
+\cf3 hint: preference for all repositories. You can also pass --rebase, --no-rebase,\cf2 \
+\cf3 hint: or --ff-only on the command line to override the configured default per\cf2 \
+\cf3 hint: invocation.\cf2 \
+Already up to date.\
+davidbarnish@Davids-MacBook-Air git-playground % git branch --all\
+* \cf5 master\cf2 \
+  \cf4 remotes/origin/master\cf2 \
+davidbarnish@Davids-MacBook-Air git-playground % git checkout -b my-feature\
+Switched to a new branch 'my-feature'\
+davidbarnish@Davids-MacBook-Air git-playground % git branch\
+  master\
+* \cf5 my-feature\cf2 \
+davidbarnish@Davids-MacBook-Air git-playground % echo "This is my new feature." feature.txt\
+This is my new feature. feature.txt\
+davidbarnish@Davids-MacBook-Air git-playground % git add -all\
+error: did you mean `--all` (with two dashes)?\
+davidbarnish@Davids-MacBook-Air git-playground % git add --all\
+davidbarnish@Davids-MacBook-Air git-playground % git commit -m "add new feature file"\
+On branch my-feature\
+nothing to commit, working tree clean\
+davidbarnish@Davids-MacBook-Air git-playground % echo "this is my new feature" > feature.rtd\
+davidbarnish@Davids-MacBook-Air git-playground % git add --all\
+davidbarnish@Davids-MacBook-Air git-playground % git commit -m "add new feature file"\
+[my-feature 7d3c53e] add new feature file\
+ 1 file changed, 1 insertion(+)\
+ create mode 100644 feature.rtd\
+davidbarnish@Davids-MacBook-Air git-playground % git checkout master\
+Switched to branch 'master'\
+Your branch is up to date with 'origin/master'.\
+davidbarnish@Davids-MacBook-Air git-playground % git checkout -b my-feature\
+fatal: A branch named 'my-feature' already exists.\
+davidbarnish@Davids-MacBook-Air git-playground % git checkout my-feature\
+Switched to branch 'my-feature'\
+davidbarnish@Davids-MacBook-Air git-playground % git branch   \
+  master\
+* \cf5 my-feature\cf2 \
+davidbarnish@Davids-MacBook-Air git-playground % git checkout master\
+Switched to branch 'master'\
+Your branch is up to date with 'origin/master'.\
+davidbarnish@Davids-MacBook-Air git-playground % git merge my-feature\
+Updating d2feefa..7d3c53e\
+Fast-forward\
+ feature.rtd | 1 \cf5 +\cf2 \
+ 1 file changed, 1 insertion(+)\
+ create mode 100644 feature.rtd\
+davidbarnish@Davids-MacBook-Air git-playground % git push\
+Enumerating objects: 4, done.\
+Counting objects: 100% (4/4), done.\
+Delta compression using up to 8 threads\
+Compressing objects: 100% (2/2), done.\
+Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.\
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0\
+To https://github.com/davelad53/git-playground.git\
+   d2feefa..7d3c53e  master -> master\
+davidbarnish@Davids-MacBook-Air git-playground % pip install some-package-name\
+zsh: command not found: pip\
+davidbarnish@Davids-MacBook-Air git-playground % pip install some-package-name==1.4\
+zsh: command not found: pip\
+davidbarnish@Davids-MacBook-Air git-playground % exit()\
+function> Exit()\
+function function> \
+function function> \
+}
